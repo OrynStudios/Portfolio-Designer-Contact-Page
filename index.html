@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interior Designer Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home" class="section hero">
+        <img src="images/heroimage.jpg" alt="Designer Portfolio Hero" class="hero-image">
+        <div class="hero-text">
+            <h1>Interior Design that Reflects You</h1>
+            <p>Refined. Personal. Effortlessly Beautiful.</p>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2>About</h2>
+        <p>I work closely with each client to transform their space into something meaningful, elegant, and livable. My process is collaborative, detail-focused, and always led by your vision.</p>
+    </section>
+
+    <section id="portfolio" class="section portfolio">
+        <h2>Selected Work</h2>
+        <div class="portfolio-images">
+            <img src="images/photo1.jpg" alt="Mockup Photo 1">
+            <img src="images/photo2.jpg" alt="Mockup Photo 2">
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <h2>Let's Work Together</h2>
+        <img src="images/contactphoto.jpg" alt="Contact Section Photo" class="contact-photo"/>
+        <form action="https://formspree.io/f/xdkdngpr" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="tel" name="phone" placeholder="Your Phone Number" pattern="[0-9]+" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="availability" placeholder="Your Availability" required>
+            <textarea name="notes" maxlength="200" placeholder="Inspiration and Notes (max 200 characters)"></textarea>
+            <button type="submit">Submit Inquiry</button>
+        </form>
+    </section>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
